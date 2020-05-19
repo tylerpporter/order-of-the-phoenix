@@ -1,0 +1,16 @@
+<h1>Order Of The Pheonix Members For <%= @members.first[:house] %></h1>
+
+<section>
+  <h2>Total Members: <%= @members.size %></h2>
+</section>
+
+<section>
+  <% @members.each do |member| %>
+    <div class="member">
+      <h2><%= member[:name] %></h2>
+      <p><%= "Role: #{member[:role]}" if member[:role].present? %></p>
+      <p><%= "House: #{member[:house]}" %></p>
+      <p><%= "Patronus: #{member[:patronus]}" if member[:patronus].present? %></p>
+    </div>
+  <% end %>
+</section>
