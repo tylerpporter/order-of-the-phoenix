@@ -1,6 +1,6 @@
 class PotterService
   class << self
-    def conn(house)
+    def phoenix_by_house(house)
       resp = Faraday.get('https://www.potterapi.com/v1/characters') do |req|
         req.params[:key] = ENV["POTTER_KEY"]
         req.params[:house] = house
