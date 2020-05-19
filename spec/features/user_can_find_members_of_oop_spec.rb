@@ -3,6 +3,7 @@ require 'rails_helper'
 describe "As a user when I visit '/' and select Gryffindor and click Search For Members" do
   before :each do
     visit '/'
+    select('Gryffindor', from: :house)
     click_on "Search For Members"
   end
   scenario "I should be on page '/search'" do
